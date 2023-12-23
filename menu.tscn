@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://b457syh2cfdjh"]
+
+[ext_resource type="Texture2D" uid="uid://d2ykmns87djl8" path="res://image 1 (1).png" id="1_1pueq"]
+[ext_resource type="Script" path="res://menu.gd" id="1_4ksgv"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4ksgv")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 281.0
+offset_right = 1087.0
+offset_bottom = 486.0
+scale = Vector2(1, 1.08)
+pivot_offset = Vector2(168, 82.4074)
+text = "Olá, você está participando de um experimento do Laboratório de Neurobiologia da Visão do Instituto do Cérebro (UFRN). 
+
+Nesse experimento, a direção do movimento será alterada aleatoriamente e você deve pressionar o primeiro e segundo botão
+ do controle sempre que você perceber a mudança na direção do movimento para Vertical ou Horizontal, respectivamente. 
+
+Esta sessão experimental tem duração de aproximadamente 10 minutos, com pausas entre as sessões. 
+Durante todo o experimento, você deve manter os olhos focados no ponto de fixação no centro do monitor
+Quando estiver pronto, Aperte em  \"Começar\" para Iniciar o Experimento."
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -105.0
+offset_top = 60.0
+offset_right = 98.0
+offset_bottom = 269.0
+grow_horizontal = 2
+texture = ExtResource("1_1pueq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.803
+anchor_right = 0.5
+anchor_bottom = 0.803
+offset_left = -39.0
+offset_top = 15.656
+offset_right = 38.0
+offset_bottom = 55.656
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="StarButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Começar"
+
+[connection signal="pressed" from="VBoxContainer/StarButton" to="." method="_on_star_button_pressed"]
