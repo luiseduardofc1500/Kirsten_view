@@ -12,4 +12,4 @@ func _process(delta):
 
 
 func _on_star_button_pressed():
-	get_tree().change_scene_to_file("res://teste.tscn")
+	get_tree().change_scene_to_file("res://form.tscn")
