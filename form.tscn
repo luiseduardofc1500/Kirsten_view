@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://c77wf0r4p1v1v"]
+
+[ext_resource type="Script" path="res://form.gd" id="1_6o8l0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6o8l0")
+
+[node name="Nome" type="Label" parent="."]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 94.0
+offset_right = 442.0
+offset_bottom = 117.0
+text = "Nome:"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 460.0
+offset_top = 90.0
+offset_right = 630.0
+offset_bottom = 121.0
+placeholder_text = "Nome completo"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 445.0
+offset_right = 554.0
+offset_bottom = 476.0
+text = "Enviar"
+
+[node name="DataNasc" type="Label" parent="."]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 141.0
+offset_right = 447.0
+offset_bottom = 164.0
+text = "Data de Nascimento:"
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 137.0
+offset_right = 631.0
+offset_bottom = 168.0
+placeholder_text = "dd/mm/aaaa"
+
+[node name="Email" type="Label" parent="."]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 197.0
+offset_right = 449.0
+offset_bottom = 220.0
+text = "Email:"
+
+[node name="LineEdit3" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 191.0
+offset_right = 632.0
+offset_bottom = 222.0
+placeholder_text = "email@example.com"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
