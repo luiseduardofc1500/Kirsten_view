@@ -45,5 +45,6 @@ func save_data(nome, dataNasc, email):
 		# Fecha o arquivo
 		arquivo.close()
 		print("Dados salvos com sucesso em ", caminho_do_arquivo)
+		get_tree().change_scene_to_file("res://TelaBrilho.tscn")
 	else:
 		print("Erro ao abrir o arquivo para escrita.")
